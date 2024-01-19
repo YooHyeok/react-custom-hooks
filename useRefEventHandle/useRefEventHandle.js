@@ -1,4 +1,4 @@
-const useClick = (event, handler) => {
+const useRefEventHandle = (event, handler) => {
   if (typeof handler !== "function") {
     return;
   }
