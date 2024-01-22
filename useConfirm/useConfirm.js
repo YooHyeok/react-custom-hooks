@@ -1,4 +1,4 @@
-const useConfirm = (message = "", onConfirm, onCancel) => {
+export const useConfirm = (message = "", onConfirm, onCancel) => {
   if (typeof onConfirm !== "function" && typeof onCancel !== "function") return;
   const confirmAction = () => {
     if (confirm(message)) {

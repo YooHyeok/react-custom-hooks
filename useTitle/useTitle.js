@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react"
-const useTitle = (initialTitle) => {
+export const useTitle = (initialTitle) => {
 
   const [title, setTitle] = useState(initialTitle);
 
