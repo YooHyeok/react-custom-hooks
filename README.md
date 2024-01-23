@@ -231,3 +231,72 @@ ref 객체의 .current가 해당 Dom요소를 참조하게 된다.
 ## Notification
 
 ## Axios
+
+## NPM에 PUBLISH
+
+배포하려는 훅이 존재하는 디렉토리에서 node 패키지를 초기화 한다.
+
+```text/plain
+> npm init
+```
+
+아래와 같은 문구가 뜨면 
+```
+package name: (usetitle) @c-hooks/use-title
+```
+예를들어 위와같이 패키지명을 입력해주고 엔터를 누른다.
+
+이어서 description과 git repository를 각각 입력후 엔터   
+Keywords: react, react hooks, custom hooks, title 입력 후 엔터
+author: 닉네임 혹은 이름 <이메일주소>
+license: MIT
+
+```
+PS C:\~> npm init
+
+...설명 중략
+
+Press ^C at any time to quit.
+package name: (usetitle) @c-hooks/use-title [입력 후 Enter] 
+version: (1.0.0) [Enter] 
+
+description: React Hook to change your document's title.
+entry point: (indexjs)
+
+test command: [Enter]
+
+git repository: https://github.com/YooHyeok/react-custom-hooks [입력 후 Enter] 
+keywords: react, react hooks, react custom hooks, title, hooks [입력 후 Enter] 
+author: YooHyeok School <webdevyoo@gmail.com> [입력 후 Enter] 
+license: (ISC) MIT [입력 후 Enter] 
+
+About to write to C:\Programming\workspace_vs\nomad\react-custom-hooks\useTitle\package.json:
+
+... 생성된 package.json 내용 생략
+```
+
+새로 생성된 package.json에서 script를 제외하고 중복 keywords를 제거한다.
+
+```
+npm i react react-dom
+```
+
+react 패키지 모듈을 단일로 설치 후 package.json의 dependency속성을 peerDependency로 변경한다.    
+이는 요구사항이다.    
+따라서 사용자가 설치 되지 않았다면 설치해주고 이미 react가 있다면 중복으로 설치되지 않는다.
+
+
+@c-hooks의 c-hooks는 npm의 범위(스코프) 이다.
+
+npm 회원가입 후 Organization을 추가한다
+https://www.npmjs.com/org/create
+
+name에 c-hooks를 입력하면 https://npmjs.com/org/c-hooks 와 같은 url이 생성된다.   
+unlimited public packages free 의 Create버튼을 클릭하여 생성한다.
+(초대 창은 skip 한다)
+
+```
+npm publish --access public
+```
+위 명령어를 입력할 경우 npm에 퍼블리시되며
+변경내용을 수정하고 다시 위 명령어를 입력할 때는 패키지 version을 변경해야 한다.
