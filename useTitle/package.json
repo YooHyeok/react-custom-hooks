@@ -1,0 +1,27 @@
+{
+  "name": "@c-hooks/use-title",
+  "version": "1.0.1",
+  "description": "React Hook to change your document's title.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YooHyeok/react-custom-hooks.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "custom hooks",
+    "title",
+    "hooks"
+  ],
+  "author": "YooHyeok School <webdevyoo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YooHyeok/react-custom-hooks/issues"
+  },
+  "homepage": "https://github.com/YooHyeok/react-custom-hooks#readme",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
